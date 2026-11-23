@@ -1,0 +1,28 @@
+{
+  "name": "Fantasy Shop",
+  "short_name": "Fantasy Shop",
+  "description": "A fictional multi-page clothing store built with HTML, CSS, and vanilla JavaScript.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#ada996",
+  "theme_color": "#ada996",
+  "icons": [
+    {
+      "src": "./assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

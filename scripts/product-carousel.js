@@ -24,7 +24,6 @@
   ];
 
   // --- Scrolling ---
-
   /**
    * Scrolls one step and wraps to the other end at the edges.
    *

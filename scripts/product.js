@@ -12,7 +12,6 @@
   const sizeInputs = [...document.querySelectorAll(".size-selector__input")];
 
   // --- Gallery ---
-
   /**
    * @param {HTMLButtonElement} selected - the clicked thumbnail button
    */

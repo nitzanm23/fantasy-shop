@@ -120,6 +120,10 @@
   text-align: center;
 }
 
+.footer__disclaimer {
+  margin-bottom: var(--space-2);
+}
+
 .footer__copyright a:hover {
   color: var(--color-path-fill);
 }

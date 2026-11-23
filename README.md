@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="./assets/logo/logo.svg" alt="Fantasy Shop logo" width="180" />
+  <img src="./assets/logos/logo.svg" alt="Fantasy Shop logo" width="180" />
 
   <h1>🛍️ Fantasy Shop</h1>
 
@@ -77,10 +77,11 @@ The home page and product cards follow the kunaal438 e-commerce tutorial credite
 ```text
 fantasy-shop/
 ├── index.html, product.html, search.html, …   # 15 pages
+├── manifest.webmanifest  # home screen name, colors, and icons
 ├── assets/
-│   ├── icons/            # favicon, icon sprite, flags
+│   ├── icons/            # favicon, home screen icons, icon sprite, flags, UI icons
 │   ├── images/           # photos grouped by page, social preview image
-│   ├── logo/
+│   ├── logos/
 │   └── videos/           # background videos and their poster frames
 ├── styles/
 │   ├── tokens.css        # design tokens (colors, spacing, motion, layers)

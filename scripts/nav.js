@@ -32,7 +32,7 @@
       <div class="navbar__inner">
         <a class="navbar__brand u-shadow-black" href="./index.html" aria-label="Fantasy Shop home">
           <img
-            src="./assets/logo/logo.svg"
+            src="./assets/logos/logo.svg"
             alt=""
             width="389"
             height="158"
@@ -211,7 +211,6 @@
   }
 
   // --- Dropdowns ---
-
   /**
    * Opens or closes one desktop dropdown. Only one dropdown is open at a time.
    *
@@ -236,7 +235,6 @@
   }
 
   // --- Mobile Menu ---
-
   /**
    * While the mobile menu is open, removes everything outside the header from the tab order
    * and from screen readers, so focus cannot wander behind the menu.

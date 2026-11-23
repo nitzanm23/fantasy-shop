@@ -67,7 +67,7 @@
         <ul class="footer__menu container">
           <li class="footer__column">
             <img
-              src="./assets/logo/logo.svg"
+              src="./assets/logos/logo.svg"
               class="footer__brand-image u-shadow-black"
               alt="Fantasy Shop"
               width="389"
@@ -112,8 +112,9 @@
       <div class="u-divider"></div>
 
       <section class="footer__copyright" aria-label="Copyright and legal">
+        <p class="footer__disclaimer u-shadow-black">Fictional store brand · Portfolio demonstration</p>
         <p class="u-shadow-black">
-          &copy; ${new Date().getFullYear()} Fantasy Shop · Fictional store brand · Portfolio demonstration. Built by
+          &copy; ${new Date().getFullYear()} Fantasy Shop. Built by
           <a class="footer__credit-link" href="${PORTFOLIO_URL}" target="_blank" rel="noopener noreferrer">${ICON("code")} NM Dev.</a>
         </p>
         <div class="u-divider u-shadow-black"></div>
