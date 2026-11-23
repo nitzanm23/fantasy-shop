@@ -113,7 +113,7 @@
 
       <section class="footer__copyright" aria-label="Copyright and legal">
         <p class="u-shadow-black">
-          &copy; ${new Date().getFullYear()} Fantasy Shop · Fictional store · Portfolio demonstration. Built by
+          &copy; ${new Date().getFullYear()} Fantasy Shop · Fictional store brand · Portfolio demonstration. Built by
           <a class="footer__credit-link" href="${PORTFOLIO_URL}" target="_blank" rel="noopener noreferrer">${ICON("code")} NM Dev.</a>
         </p>
         <div class="u-divider u-shadow-black"></div>
