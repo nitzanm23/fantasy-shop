@@ -1,0 +1,199 @@
+/**
+ * Fantasy Shop: sign-up and log-in pages.
+ *
+ * Loaded by sign-up.html and log-in.html, which share one layout: a full-screen background
+ * video behind the form card, with social sign-in buttons below the form.
+ */
+
+/* ========== AUTH HERO ========== */
+.auth-page {
+  position: relative;
+  min-height: 100dvh;
+  overflow: hidden;
+}
+
+.auth-page__video {
+  width: 100%;
+  height: 100dvh;
+  object-fit: cover;
+  box-shadow: var(--shadow-card);
+  pointer-events: none;
+}
+
+.auth-page__content {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: calc(var(--navbar-height) + var(--space-8)) var(--space-4)
+    var(--space-8);
+}
+
+/* ========== AUTH CARD ========== */
+.auth-card {
+  width: min(100%, 560px);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-radius: var(--radius-lg);
+  background: var(--gradient-surface-transparent);
+  box-shadow: var(--shadow-card);
+  color: var(--color-invert);
+  filter: var(--drop-shadow-white);
+}
+
+.auth-card__title {
+  margin-bottom: var(--space-5);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.auth-card__divider {
+  margin-bottom: var(--space-5);
+}
+
+/* ========== FORM ========== */
+.auth-form {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.auth-form__field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.auth-form__label {
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+}
+
+.auth-form__input {
+  width: 100%;
+  padding: var(--space-3) 0;
+  border: 0;
+  border-bottom: 1px solid var(--color-invert);
+  background: transparent;
+  color: var(--color-invert);
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+.auth-form__input::placeholder {
+  color: var(--color-invert);
+  opacity: 0.55;
+}
+
+.auth-form__input:focus {
+  border-bottom-color: var(--color-invert);
+  box-shadow: 0 1px 0 0 var(--color-invert);
+  outline: none;
+}
+
+.auth-form__helper {
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  text-align: center;
+}
+
+.auth-form__helper-button,
+.auth-form__switch a {
+  font-weight: var(--font-weight-bold);
+}
+
+.auth-form__switch {
+  margin-top: var(--space-6);
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  text-align: center;
+}
+
+.auth-form__submit {
+  width: min(100%, 340px);
+  margin-inline: auto;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+}
+
+/* ========== SOCIAL AUTH ========== */
+.social-auth {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+
+.social-auth__divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 1px;
+}
+
+.social-auth__divider::before,
+.social-auth__divider::after {
+  content: "";
+  width: min(35%, 140px);
+  height: 1px;
+  background: var(--gradient-divider);
+}
+
+.social-auth__list {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.social-auth__link {
+  display: inline-grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: var(--radius-full);
+  background: transparent;
+  transition:
+    background var(--transition-fast),
+    filter var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.social-auth__link:hover,
+.social-auth__link:focus-visible {
+  background: var(--gradient-surface-transparent);
+  box-shadow: var(--shadow-light);
+  filter: var(--drop-shadow-white);
+}
+
+.social-auth__icon {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.social-auth__icon--google {
+  color: #dd4b39;
+}
+
+.social-auth__icon--apple {
+  color: var(--color-primary);
+}
+
+.social-auth__icon--facebook {
+  color: #3b5998;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media only screen and (max-width: 600px) {
+  .auth-page__video {
+    height: 900px;
+  }
+
+  .auth-card {
+    width: min(100%, 440px);
+  }
+}
+
+@media only screen and (max-width: 474px) {
+  .auth-page__video {
+    height: 750px;
+  }
+
+  .auth-page__content {
+    padding-inline: var(--space-3);
+  }
+}

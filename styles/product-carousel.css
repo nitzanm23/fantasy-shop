@@ -1,0 +1,184 @@
+/**
+ * Fantasy Shop: product cards and carousels.
+ *
+ * Loaded by index.html and product.html. The same card markup is reused in search.html, where
+ * search.css adjusts it for a grid.
+ */
+
+/* ========== CAROUSEL BASE ========== */
+.product-section,
+.related-products {
+  position: relative;
+  padding: var(--space-5) 0;
+  overflow: hidden;
+}
+
+.product-section__title,
+.related-products__title {
+  margin-block: var(--space-8);
+  padding-inline: 10vw;
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  text-transform: capitalize;
+  filter: var(--drop-shadow-black);
+}
+
+.product-section__viewport,
+.related-products__viewport {
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.product-section__viewport::-webkit-scrollbar,
+.related-products__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.product-section__list,
+.related-products__list {
+  display: flex;
+  gap: var(--space-6);
+}
+
+/* ========== NAV BUTTONS ========== */
+.product-section__nav-button,
+.related-products__nav-button {
+  position: absolute;
+  top: 50%;
+  z-index: 8;
+  width: clamp(23px, 3vw, 48px);
+  height: clamp(23px, 3vw, 48px);
+  display: grid;
+  place-items: center;
+  background: var(--color-invert);
+  border-radius: 50%;
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background var(--transition-fast);
+}
+
+.product-section__nav-button:hover,
+.related-products__nav-button:hover {
+  background: var(--color-primary);
+}
+
+.product-section__nav-button--previous,
+.related-products__nav-button--previous {
+  left: 1vw;
+}
+
+.product-section__nav-button--next,
+.related-products__nav-button--next {
+  right: 1vw;
+}
+
+.product-section__nav-button img,
+.related-products__nav-button img {
+  width: clamp(23px, 3vw, 32px);
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+}
+
+.product-section__nav-button--previous img,
+.related-products__nav-button--previous img {
+  transform: rotate(180deg);
+}
+
+.product-section__nav-button:hover img,
+.related-products__nav-button:hover img {
+  opacity: 1;
+  filter: invert(1);
+}
+
+/* ========== PRODUCT CARD ========== */
+.product-card {
+  flex: 0 0 auto;
+  width: 250px;
+}
+
+.product-card__media {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.product-card__badge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: 2;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--color-invert);
+  color: var(--color-primary);
+}
+
+.product-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform var(--transition-base),
+    filter var(--transition-base);
+}
+
+.product-card:hover .product-card__image {
+  transform: scale(1.04);
+  filter: var(--drop-shadow-black);
+}
+
+.product-card__wishlist-button {
+  position: absolute;
+  right: 50%;
+  bottom: var(--space-3);
+  width: 90%;
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--color-invert);
+  color: var(--color-primary);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(50%) translateY(12px);
+  transition: all var(--transition-fast);
+}
+
+.product-card:hover .product-card__wishlist-button {
+  opacity: 1;
+  transform: translateX(50%) translateY(0);
+}
+
+.product-card__wishlist-button:hover {
+  background: var(--color-primary);
+  color: var(--color-invert);
+}
+
+.product-card__body {
+  padding-block: var(--space-4);
+}
+
+.product-card__brand {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.product-card__description {
+  margin-top: var(--space-1);
+  color: var(--color-secondary);
+}
+
+.product-card__price-row {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.product-card__actual-price {
+  text-decoration: line-through;
+}

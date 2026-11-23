@@ -1,0 +1,158 @@
+/**
+ * Fantasy Shop: user profile page.
+ *
+ * Loaded only by user-profile.html: the hero video, the floating avatar, account details, and
+ * shopping stats.
+ */
+
+/* ========== PROFILE HERO ========== */
+.profile-hero {
+  position: relative;
+  min-height: var(--page-hero-height);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.profile-hero__video {
+  width: 100%;
+  height: var(--page-hero-height);
+  object-fit: cover;
+}
+
+/* ========== AVATAR FLOATING WRAPPER ========== */
+.profile-avatar-wrapper {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  margin-top: -120px;
+  margin-bottom: clamp(-80px, -10vw, -60px);
+  animation: fade-in-profile var(--transition-slow) both;
+}
+
+.profile__avatar {
+  width: clamp(200px, 30vw, 300px);
+  height: clamp(200px, 30vw, 300px);
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  box-shadow: var(--shadow-card);
+  filter: var(--drop-shadow-black);
+  animation: profile-float 2.5s ease-in-out infinite alternate;
+}
+
+/* ========== PROFILE ========== */
+.profile {
+  padding-bottom: var(--space-12);
+}
+
+.profile__card {
+  padding: var(--space-8);
+  padding-top: calc(var(--space-8) + clamp(60px, 10vw, 80px));
+  border-radius: var(--radius-lg);
+  background: var(--gradient-surface-top);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.profile__name {
+  margin-bottom: var(--space-3);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: var(--font-weight-bold);
+}
+
+.profile__level {
+  margin-bottom: var(--space-8);
+  color: var(--color-secondary);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.profile__level span,
+.profile-detail-list span,
+.profile-stats__value {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ========== PROFILE DETAILS ========== */
+.profile-detail-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-5);
+  color: var(--color-secondary);
+  line-height: 1.3;
+}
+
+.profile-detail-list__item {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* ========== PROFILE STATS ========== */
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin: var(--space-8) 0;
+}
+
+.profile-stats__item {
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.35);
+  color: var(--color-secondary);
+}
+
+.profile-stats__value {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-size: 1.8rem;
+}
+
+/* ========== ACTIONS ========== */
+.profile__actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* ========== ANIMATIONS ========== */
+.profile.fade-in,
+.profile-avatar-wrapper.fade-in {
+  animation: fade-in-profile var(--transition-slow) both;
+}
+
+@keyframes fade-in-profile {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes profile-float {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-12px);
+  }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media only screen and (max-width: 768px) {
+  .profile-detail-list,
+  .profile-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .profile__card {
+    padding: var(--space-5);
+    padding-top: calc(var(--space-5) + clamp(60px, 10vw, 80px));
+  }
+}

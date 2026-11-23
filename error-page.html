@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <!--
+    Fantasy Shop: "page not found" (404) page (portfolio demo).
+    Sections: Header, Error Hero, Recovery Search, Recovery Links, Footer.
+    Header and footer markup is rendered by scripts/nav.js and scripts/footer.js.
+  -->
+
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Fantasy Shop 404 page - the page you are looking for was not found. Return home, search, or contact support."
+    />
+    <meta name="theme-color" content="#22232e" />
+
+    <title>Page Not Found | Fantasy Shop</title>
+
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+    <meta name="robots" content="noindex" />
+
+    <!-- Social sharing preview (LinkedIn, Slack, WhatsApp, X); these require absolute URLs -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fantasy Shop" />
+    <meta property="og:title" content="Page Not Found | Fantasy Shop" />
+    <meta
+      property="og:description"
+      content="Fantasy Shop 404 page - the page you are looking for was not found. Return home, search, or contact support."
+    />
+    <meta
+      property="og:url"
+      content="https://nitzanm23.github.io/fantasy-shop/error-page.html"
+    />
+    <meta
+      property="og:image"
+      content="https://nitzanm23.github.io/fantasy-shop/assets/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Fantasy Shop home page with product carousels"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Self-hosted font (vendor/) -->
+    <link
+      rel="preload"
+      href="./vendor/fonts/fredoka-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./vendor/fonts/fonts.css" />
+
+    <!-- Project styles -->
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/error-page.css" />
+
+    <!-- Project scripts -->
+    <script src="./scripts/nav.js" defer></script>
+    <script src="./scripts/footer.js" defer></script>
+    <script src="./scripts/demo-notice.js" defer></script>
+  </head>
+
+  <body class="error-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+      <nav class="navbar u-radius-bottom" aria-label="Primary navigation"></nav>
+    </header>
+
+    <!-- ========== ERROR HERO ========== -->
+    <main class="page-main" id="main-content">
+      <section class="error-hero parallax" aria-labelledby="error-title">
+        <div class="page-hero__content">
+          <div class="error-hero__panel">
+            <h1 class="error-hero__title fade-in" id="error-title">
+              Page <span>Not</span> Found
+            </h1>
+            <p class="error-hero__text fade-in">
+              We can't seem to find the page you're looking for. Please check
+              the URL for any typos.
+            </p>
+
+            <!-- ========== RECOVERY SEARCH ========== -->
+            <form
+              class="error-search fade-in"
+              role="search"
+              action="./search.html"
+            >
+              <label class="sr-only" for="error-search"
+                >Search Fantasy Shop</label
+              >
+              <input
+                class="error-search__input"
+                id="error-search"
+                name="query"
+                type="search"
+                placeholder="Search..."
+              />
+              <button
+                class="error-search__button"
+                type="submit"
+                aria-label="Search"
+              >
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="./assets/icons/icons.svg#search" />
+                </svg>
+              </button>
+            </form>
+
+            <!-- ========== RECOVERY LINKS ========== -->
+            <ul class="error-links fade-in">
+              <li>
+                <a class="error-links__link" href="./index.html"
+                  >Go to Homepage</a
+                >
+              </li>
+              <li>
+                <a class="error-links__link" href="./contact-us.html"
+                  >Contact Support</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer u-radius-bottom"></footer>
+  </body>
+</html>

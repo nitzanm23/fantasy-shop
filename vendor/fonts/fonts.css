@@ -1,0 +1,11 @@
+/**
+ * Self-hosted Fredoka variable font from @fontsource-variable/fredoka 5.3.0 (Latin subset).
+ * One file covers weights 300–700. License: SIL OFL 1.1 (LICENSE-Fredoka.txt in this folder).
+ */
+@font-face {
+  font-family: "Fredoka";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("./fredoka-latin-wght-normal.woff2") format("woff2-variations");
+}

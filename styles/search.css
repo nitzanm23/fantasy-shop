@@ -1,0 +1,161 @@
+/**
+ * Fantasy Shop: search results page.
+ *
+ * Loaded only by search.html: the results heading and a product grid that adapts the card
+ * styles from product-carousel.css.
+ */
+
+/* ========== SEARCH RESULTS ========== */
+.search-results {
+  padding-block: var(--space-12);
+}
+
+.search-results__title {
+  margin-bottom: var(--space-10);
+  padding-inline: 10vw;
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: var(--font-weight-regular);
+  text-align: center;
+  text-transform: capitalize;
+  filter: var(--drop-shadow-black);
+}
+
+.search-results__title span {
+  font-weight: var(--font-weight-bold);
+}
+
+/* ========== PRODUCT GRID ========== */
+.search-results__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8) var(--space-6);
+}
+
+/* ========== PRODUCT CARD ========== */
+.product-card {
+  min-width: 0;
+}
+
+.product-card__media {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.product-card__badge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: 2;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--color-invert);
+  color: var(--color-primary);
+  text-transform: capitalize;
+}
+
+.product-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform var(--transition-base),
+    filter var(--transition-base);
+}
+
+.product-card:hover .product-card__image {
+  transform: scale(1.04);
+  filter: var(--drop-shadow-black);
+}
+
+.product-card__wishlist-button {
+  position: absolute;
+  right: 50%;
+  bottom: var(--space-3);
+  z-index: 2;
+  width: 90%;
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--color-invert);
+  color: var(--color-primary);
+  cursor: pointer;
+  opacity: 0;
+  text-transform: capitalize;
+  transform: translateX(50%) translateY(12px);
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.product-card:hover .product-card__wishlist-button,
+.product-card__wishlist-button:focus-visible {
+  opacity: 1;
+  transform: translateX(50%) translateY(0);
+}
+
+.product-card__wishlist-button:hover {
+  background: var(--color-primary);
+  color: var(--color-invert);
+}
+
+.product-card__body {
+  padding-block: var(--space-4);
+}
+
+.product-card__brand {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: capitalize;
+}
+
+.product-card__description {
+  margin-top: var(--space-1);
+  color: var(--color-secondary);
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+.product-card__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.product-card__price {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.product-card__actual-price {
+  color: var(--color-secondary);
+  text-decoration: line-through;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media screen and (max-width: 992px) {
+  .search-results__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .search-results__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card__media {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .product-card__media {
+    height: 340px;
+  }
+}

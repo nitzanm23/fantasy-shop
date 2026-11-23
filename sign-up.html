@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <!--
+    Fantasy Shop: sign-up page (portfolio demo).
+    Sections: Header, Auth Form, Footer.
+    Header and footer markup is rendered by scripts/nav.js and scripts/footer.js.
+  -->
+
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Create your Fantasy Shop account to save products, manage your wishlist, and enjoy a personalized shopping experience."
+    />
+    <meta name="theme-color" content="#ada996" />
+
+    <title>Sign Up | Fantasy Shop</title>
+
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+    <link
+      rel="canonical"
+      href="https://nitzanm23.github.io/fantasy-shop/sign-up.html"
+    />
+
+    <!-- Social sharing preview (LinkedIn, Slack, WhatsApp, X); these require absolute URLs -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fantasy Shop" />
+    <meta property="og:title" content="Sign Up | Fantasy Shop" />
+    <meta
+      property="og:description"
+      content="Create your Fantasy Shop account to save products, manage your wishlist, and enjoy a personalized shopping experience."
+    />
+    <meta
+      property="og:url"
+      content="https://nitzanm23.github.io/fantasy-shop/sign-up.html"
+    />
+    <meta
+      property="og:image"
+      content="https://nitzanm23.github.io/fantasy-shop/assets/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Fantasy Shop home page with product carousels"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Self-hosted font (vendor/) -->
+    <link
+      rel="preload"
+      href="./vendor/fonts/fredoka-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./vendor/fonts/fonts.css" />
+
+    <!-- Project styles -->
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/auth.css" />
+
+    <!-- Project scripts -->
+    <script src="./scripts/nav.js" defer></script>
+    <script src="./scripts/footer.js" defer></script>
+    <script src="./scripts/demo-notice.js" defer></script>
+    <script src="./scripts/background-video.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+      <nav class="navbar u-radius-bottom" aria-label="Primary navigation"></nav>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="page-main" id="main-content">
+      <!-- ========== AUTH FORM ========== -->
+      <section class="auth-page" aria-labelledby="auth-title">
+        <video
+          class="auth-page__video"
+          poster="./assets/videos/sign-up-poster.webp"
+          loop
+          muted
+          playsinline
+          preload="metadata"
+          data-background-video
+          aria-hidden="true"
+        >
+          <source src="./assets/videos/sign-up.mp4" type="video/mp4" />
+        </video>
+
+        <div class="auth-page__content fade-in">
+          <article class="auth-card">
+            <h1 class="auth-card__title" id="auth-title">Sign Up</h1>
+            <div class="u-divider auth-card__divider"></div>
+
+            <!-- Demo form, no backend: fields have no `name`, so no data reaches the URL. -->
+            <form class="auth-form" action="./log-in.html">
+              <div class="auth-form__field">
+                <label class="auth-form__label sr-only" for="sign-up-email"
+                  >Email</label
+                >
+                <input
+                  class="auth-form__input"
+                  type="email"
+                  id="sign-up-email"
+                  autocomplete="email"
+                  required
+                  placeholder="Email"
+                />
+              </div>
+
+              <div class="auth-form__field">
+                <label
+                  class="auth-form__label sr-only"
+                  for="sign-up-create-password"
+                  >Create Password</label
+                >
+                <input
+                  class="auth-form__input"
+                  type="password"
+                  id="sign-up-create-password"
+                  autocomplete="new-password"
+                  required
+                  placeholder="Create Password"
+                />
+              </div>
+
+              <div class="auth-form__field">
+                <label
+                  class="auth-form__label sr-only"
+                  for="sign-up-confirm-password"
+                  >Confirm Password</label
+                >
+                <input
+                  class="auth-form__input"
+                  type="password"
+                  id="sign-up-confirm-password"
+                  autocomplete="new-password"
+                  required
+                  placeholder="Confirm Password"
+                />
+              </div>
+
+              <button class="button auth-form__submit" type="submit">
+                Sign Up
+              </button>
+
+              <p class="auth-form__switch">
+                Already have an account?
+                <a href="./log-in.html">Log In</a>
+              </p>
+
+              <div
+                class="social-auth"
+                role="group"
+                aria-label="Social sign-up options"
+              >
+                <p class="social-auth__divider">Or</p>
+
+                <div class="social-auth__list">
+                  <button
+                    class="social-auth__link"
+                    type="button"
+                    aria-label="Sign up with Google"
+                    data-demo="social login"
+                  >
+                    <svg
+                      class="icon social-auth__icon social-auth__icon--google"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use href="./assets/icons/icons.svg#google" />
+                    </svg>
+                  </button>
+                  <button
+                    class="social-auth__link"
+                    type="button"
+                    aria-label="Sign up with Apple"
+                    data-demo="social login"
+                  >
+                    <svg
+                      class="icon social-auth__icon social-auth__icon--apple"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use href="./assets/icons/icons.svg#apple" />
+                    </svg>
+                  </button>
+                  <button
+                    class="social-auth__link"
+                    type="button"
+                    aria-label="Sign up with Facebook"
+                    data-demo="social login"
+                  >
+                    <svg
+                      class="icon social-auth__icon social-auth__icon--facebook"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use href="./assets/icons/icons.svg#facebook-f" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer u-radius-bottom"></footer>
+  </body>
+</html>

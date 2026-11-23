@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <!--
+    Fantasy Shop: contact page (portfolio demo).
+    Sections: Header, Location Map, Contact Form, Contact Details, Footer.
+    Header and footer markup is rendered by scripts/nav.js and scripts/footer.js.
+  -->
+
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Fantasy Shop for support, questions, feedback, partnerships, or product inquiries."
+    />
+    <meta name="theme-color" content="#ada996" />
+
+    <title>Contact Us | Fantasy Shop</title>
+
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+    <link
+      rel="canonical"
+      href="https://nitzanm23.github.io/fantasy-shop/contact-us.html"
+    />
+
+    <!-- Social sharing preview (LinkedIn, Slack, WhatsApp, X); these require absolute URLs -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fantasy Shop" />
+    <meta property="og:title" content="Contact Us | Fantasy Shop" />
+    <meta
+      property="og:description"
+      content="Contact Fantasy Shop for support, questions, feedback, partnerships, or product inquiries."
+    />
+    <meta
+      property="og:url"
+      content="https://nitzanm23.github.io/fantasy-shop/contact-us.html"
+    />
+    <meta
+      property="og:image"
+      content="https://nitzanm23.github.io/fantasy-shop/assets/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Fantasy Shop home page with product carousels"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Self-hosted font (vendor/) -->
+    <link
+      rel="preload"
+      href="./vendor/fonts/fredoka-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./vendor/fonts/fonts.css" />
+
+    <!-- Project styles -->
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/company-pages.css" />
+
+    <!-- Project scripts -->
+    <script src="./scripts/nav.js" defer></script>
+    <script src="./scripts/footer.js" defer></script>
+    <script src="./scripts/demo-notice.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+      <nav class="navbar u-radius-bottom" aria-label="Primary navigation"></nav>
+    </header>
+
+    <!-- ========== LOCATION MAP ========== -->
+    <section class="contact-map" aria-label="Fantasy Shop map location">
+      <iframe
+        class="contact-map__iframe"
+        title="Fantasy Shop location"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=32.0967494,34.7730487&z=17&output=embed"
+      ></iframe>
+    </section>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="page-main" id="main-content">
+      <div class="container">
+        <!-- ========== CONTACT LAYOUT ========== -->
+        <section class="contact-layout fade-in" aria-labelledby="contact-title">
+          <!-- ========== CONTACT FORM ========== -->
+          <article class="contact-card">
+            <h1 class="content-section__title" id="contact-title">
+              Contact Us
+            </h1>
+            <p class="content-section__description">
+              We're here to help. Send us your question, feedback, or request
+              and our team will respond soon.
+            </p>
+
+            <!-- Demo form: no backend. Fields have no `name`, so nothing is sent in the URL. -->
+            <form class="contact-form" action="./thank-you.html">
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-name"
+                  >Your name</label
+                >
+                <input
+                  class="contact-form__input"
+                  type="text"
+                  id="contact-name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-email"
+                  >Your email</label
+                >
+                <input
+                  class="contact-form__input"
+                  type="email"
+                  id="contact-email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-subject"
+                  >Subject</label
+                >
+                <input
+                  class="contact-form__input"
+                  type="text"
+                  id="contact-subject"
+                  required
+                />
+              </div>
+
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-message"
+                  >Message</label
+                >
+                <textarea
+                  class="contact-form__textarea"
+                  id="contact-message"
+                  required
+                ></textarea>
+              </div>
+
+              <button class="button" type="submit">Send Message</button>
+            </form>
+          </article>
+
+          <!-- ========== CONTACT DETAILS ========== -->
+          <!-- Placeholders: .example is reserved (RFC 2606); zeros mark a sample number. -->
+          <aside
+            class="contact-info contact-info-card"
+            aria-label="Contact information"
+          >
+            <h2 class="contact-info-card__title">Contact Details</h2>
+            <p class="contact-info-card__text">
+              Reach us directly through one of the channels below. We usually
+              respond within 24 hours.
+            </p>
+
+            <ul class="contact-info-list">
+              <li class="contact-info-list__item">
+                <span class="contact-info-list__icon">
+                  <svg
+                    class="icon contact-info-list__icon--email"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use href="./assets/icons/icons.svg#envelope" />
+                  </svg>
+                </span>
+                <span>
+                  <strong>Email</strong>
+                  <a href="mailto:support@fantasyshop.example"
+                    >support@fantasyshop.example</a
+                  >
+                </span>
+              </li>
+
+              <li class="contact-info-list__item">
+                <span class="contact-info-list__icon">
+                  <svg
+                    class="icon contact-info-list__icon--phone"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use href="./assets/icons/icons.svg#phone" />
+                  </svg>
+                </span>
+                <span>
+                  <strong>Phone</strong>
+                  <a href="tel:+97230000000"
+                    >+972&nbsp;3&#8209;000&#8209;0000</a
+                  >
+                </span>
+              </li>
+
+              <li class="contact-info-list__item">
+                <span class="contact-info-list__icon">
+                  <svg
+                    class="icon contact-info-list__icon--location"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use href="./assets/icons/icons.svg#location-dot" />
+                  </svg>
+                </span>
+                <span>
+                  <strong>Location</strong>
+                  Tel Aviv Port, Israel
+                </span>
+              </li>
+            </ul>
+          </aside>
+        </section>
+      </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer u-radius-bottom"></footer>
+  </body>
+</html>

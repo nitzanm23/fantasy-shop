@@ -1,0 +1,227 @@
+/**
+ * Fantasy Shop: components shared across pages.
+ *
+ * Loaded by every page: the page hero banner, content sections, text lists, the button style,
+ * and the fade-in entrance animation.
+ */
+
+/* ========== PAGE HERO ========== */
+.page-hero {
+  position: relative;
+  min-height: var(--page-hero-height);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.page-hero__media {
+  width: 100%;
+  height: var(--page-hero-height);
+  object-fit: cover;
+  box-shadow: var(--shadow-card);
+}
+
+.page-hero__content {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--space-4);
+  text-align: center;
+}
+
+.page-hero__panel {
+  max-width: min(100% - 2rem, 760px);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background-color: rgba(62, 69, 81, 0.53);
+}
+
+.page-hero__title {
+  color: var(--color-invert);
+  font-size: clamp(30px, 6vw, 72px);
+  font-weight: var(--font-weight-light);
+  line-height: 1.2;
+  filter: var(--drop-shadow-white);
+}
+
+.page-hero__title span {
+  font-weight: var(--font-weight-bold);
+}
+
+.page-hero__subtitle {
+  margin-top: var(--space-3);
+  color: var(--color-invert);
+  font-size: clamp(15px, 1.5vw, 20px);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+/* ========== CONTENT SECTION ========== */
+.content-section {
+  padding-block: var(--space-12);
+}
+
+.content-section__title {
+  position: relative;
+  margin-bottom: var(--space-12);
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.content-section__title::before,
+.content-section__title::after {
+  content: "";
+  position: absolute;
+  top: 130%;
+  display: block;
+  width: clamp(60px, 15%, 100px);
+  height: 5px;
+  background: var(--color-secondary);
+}
+
+.content-section__title::before {
+  left: 50%;
+}
+
+.content-section__title::after {
+  right: 50%;
+}
+
+.content-section__description {
+  width: min(75%, 720px);
+  margin-inline: auto;
+  margin-bottom: var(--space-12);
+  color: var(--color-secondary);
+  line-height: 1.35;
+  text-align: center;
+}
+
+.content-section__description span {
+  font-weight: var(--font-weight-bold);
+}
+
+/* ========== TEXT LIST ========== */
+.text-list {
+  width: min(85%, 820px);
+  margin-inline: auto;
+  margin-bottom: var(--space-12);
+  color: var(--color-secondary);
+  line-height: 1.35;
+  list-style: disc;
+}
+
+.text-list__heading {
+  padding-bottom: var(--space-2);
+  font-weight: var(--font-weight-bold);
+  list-style: none;
+}
+
+.text-list span {
+  font-weight: var(--font-weight-bold);
+}
+
+.text-list--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+/* ========== BUTTONS ========== */
+.button {
+  position: relative;
+  z-index: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-5);
+  overflow: visible;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: var(--color-invert);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  isolation: isolate;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  z-index: -1;
+  background: var(--gradient-glow-button);
+  background-size: 400%;
+  border-radius: inherit;
+  opacity: 0;
+  filter: blur(5px);
+  transition: opacity var(--transition-fast);
+  animation: button-glow 20s linear infinite;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--color-primary);
+}
+
+.button:hover::before {
+  opacity: 1;
+}
+
+.button:active {
+  color: var(--color-primary);
+}
+
+.button:active::after {
+  background: transparent;
+}
+
+@keyframes button-glow {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* ========== FADE IN ========== */
+.is-loaded .fade-in-is-loaded,
+.fade-in {
+  animation: fade-in-up var(--transition-slow) both;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media screen and (max-width: 600px) {
+  .text-list--grid {
+    display: block;
+  }
+
+  .content-section__description,
+  .text-list {
+    width: min(100%, 720px);
+  }
+}

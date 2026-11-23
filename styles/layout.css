@@ -1,0 +1,173 @@
+/**
+ * Fantasy Shop: global styles and shared utilities.
+ *
+ * Loaded by every page, after tokens.css and reset.css: document styles, the container,
+ * utility classes, SVG icon sizing, and the elements added by scripts (skip link, demo notice,
+ * video toggle).
+ */
+
+/* ========== GLOBAL ========== */
+body {
+  color: var(--color-primary);
+  background: var(--gradient-surface-left);
+  font-family: var(--font-primary);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-light);
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  overflow-x: hidden;
+}
+
+/* ========== LAYOUT ========== */
+.container {
+  width: min(100% - 2rem, var(--container-max-width));
+  margin-inline: auto;
+}
+
+.app-root {
+  min-height: 100dvh;
+}
+
+.page-main {
+  width: 100%;
+}
+
+/* ========== UTILITIES ========== */
+.grid {
+  display: grid;
+}
+
+.u-shadow-black {
+  filter: var(--drop-shadow-black);
+}
+
+.u-shadow-white {
+  filter: var(--drop-shadow-white);
+}
+
+.u-radius-bottom {
+  border-bottom-right-radius: var(--radius-sm);
+  border-bottom-left-radius: var(--radius-sm);
+}
+
+.u-divider {
+  width: 100%;
+  height: 1px;
+  margin-inline: auto;
+  background: var(--gradient-divider);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip-path: inset(50%);
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+/* ========== ICONS ========== */
+/* Icons from assets/icons/icons.svg: sized by font-size and colored by `color`, like a font. */
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+.flag-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+/* ========== DEMO NOTICE ========== */
+/* Message shown by demo-notice.js when a control has no backend in this demo. */
+.demo-notice {
+  position: fixed;
+  bottom: var(--space-6);
+  left: 50%;
+  z-index: var(--z-notice);
+  max-width: min(90vw, 26rem);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  color: var(--color-invert);
+  text-align: center;
+  box-shadow: var(--shadow-light);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 12px);
+  transition:
+    opacity var(--transition-fast),
+    visibility var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.demo-notice.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+/* ========== VIDEO TOGGLE ========== */
+/* Pause/Play button added by background-video.js inside each (position: relative) video section. */
+.video-toggle {
+  position: absolute;
+  right: var(--space-4);
+  bottom: var(--space-4);
+  z-index: 2;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--color-invert);
+  font-size: 0.875rem;
+}
+
+.video-toggle:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.video-toggle:focus-visible {
+  outline-color: var(--color-invert);
+}
+
+/* ========== SKIP LINK ========== */
+.skip-link {
+  position: fixed;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: var(--z-notice);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: var(--color-invert);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+/* ========== MEDIA ========== */
+.parallax {
+  width: 100%;
+  min-height: var(--page-hero-height);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@supports (background-attachment: fixed) {
+  .parallax {
+    background-attachment: fixed;
+  }
+}

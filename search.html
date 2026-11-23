@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <!--
+    Fantasy Shop: search results page (portfolio demo).
+    Sections: Header, Search Hero, Search Results, Footer.
+    Header and footer markup is rendered by scripts/nav.js and scripts/footer.js.
+  -->
+
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Search Fantasy Shop products and discover curated items, exclusive deals, and fantasy-inspired shopping results."
+    />
+    <meta name="theme-color" content="#ada996" />
+
+    <title>Search Products | Fantasy Shop</title>
+
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+    <link
+      rel="canonical"
+      href="https://nitzanm23.github.io/fantasy-shop/search.html"
+    />
+
+    <!-- Social sharing preview (LinkedIn, Slack, WhatsApp, X); these require absolute URLs -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fantasy Shop" />
+    <meta property="og:title" content="Search Products | Fantasy Shop" />
+    <meta
+      property="og:description"
+      content="Search Fantasy Shop products and discover curated items, exclusive deals, and fantasy-inspired shopping results."
+    />
+    <meta
+      property="og:url"
+      content="https://nitzanm23.github.io/fantasy-shop/search.html"
+    />
+    <meta
+      property="og:image"
+      content="https://nitzanm23.github.io/fantasy-shop/assets/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Fantasy Shop home page with product carousels"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Self-hosted font (vendor/) -->
+    <link
+      rel="preload"
+      href="./vendor/fonts/fredoka-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./vendor/fonts/fonts.css" />
+
+    <!-- Project styles -->
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/search.css" />
+
+    <!-- Project scripts -->
+    <script src="./scripts/nav.js" defer></script>
+    <script src="./scripts/footer.js" defer></script>
+    <script src="./scripts/demo-notice.js" defer></script>
+    <script src="./scripts/background-video.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+      <nav class="navbar u-radius-bottom" aria-label="Primary navigation"></nav>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+
+    <main class="page-main" id="main-content">
+      <!-- ========== SEARCH HERO ========== -->
+      <section class="page-hero">
+        <video
+          class="page-hero__media"
+          poster="./assets/videos/search-poster.webp"
+          loop
+          muted
+          playsinline
+          preload="metadata"
+          data-background-video
+          aria-hidden="true"
+        >
+          <source src="./assets/videos/search.mp4" type="video/mp4" />
+        </video>
+
+        <div class="page-hero__content">
+          <div class="page-hero__panel fade-in">
+            <h1 class="page-hero__title" id="search-hero-title">
+              Search <span>Product</span>
+            </h1>
+            <p class="page-hero__subtitle">
+              Search the product you are looking for.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SEARCH RESULTS ========== -->
+      <section
+        class="search-results fade-in"
+        aria-labelledby="search-results-title"
+      >
+        <div class="container">
+          <h2 class="search-results__title" id="search-results-title">
+            Search results for <span>product</span>
+          </h2>
+
+          <div class="search-results__grid">
+            <article class="product-card">
+              <div class="product-card__media">
+                <span class="product-card__badge">50% off</span>
+                <img
+                  src="./assets/images/index/best-seller-1.webp"
+                  class="product-card__image"
+                  alt="Yellow two-piece tracksuit"
+                  draggable="false"
+                  loading="lazy"
+                />
+                <button
+                  class="product-card__wishlist-button"
+                  type="button"
+                  data-demo="the wishlist"
+                >
+                  add to wishlist
+                </button>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__brand">Fantasy Street</h3>
+                <p class="product-card__description">
+                  Yellow two-piece tracksuit
+                </p>
+                <p class="product-card__price-row">
+                  <span class="product-card__price">$48</span>
+                  <span class="product-card__actual-price">$96</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__media">
+                <span class="product-card__badge">40% off</span>
+                <img
+                  src="./assets/images/index/best-seller-2.webp"
+                  class="product-card__image"
+                  alt="Smartwatch with sport band"
+                  draggable="false"
+                  loading="lazy"
+                />
+                <button
+                  class="product-card__wishlist-button"
+                  type="button"
+                  data-demo="the wishlist"
+                >
+                  add to wishlist
+                </button>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__brand">Fantasy Tech</h3>
+                <p class="product-card__description">
+                  Smartwatch with sport band
+                </p>
+                <p class="product-card__price-row">
+                  <span class="product-card__price">$149</span>
+                  <span class="product-card__actual-price">$249</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__media">
+                <span class="product-card__badge">36% off</span>
+                <img
+                  src="./assets/images/index/best-seller-3.webp"
+                  class="product-card__image"
+                  alt="Burgundy button-up shirt"
+                  draggable="false"
+                  loading="lazy"
+                />
+                <button
+                  class="product-card__wishlist-button"
+                  type="button"
+                  data-demo="the wishlist"
+                >
+                  add to wishlist
+                </button>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__brand">Fantasy Basics</h3>
+                <p class="product-card__description">
+                  Burgundy button-up shirt
+                </p>
+                <p class="product-card__price-row">
+                  <span class="product-card__price">$29</span>
+                  <span class="product-card__actual-price">$45</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__media">
+                <span class="product-card__badge">31% off</span>
+                <img
+                  src="./assets/images/index/best-seller-4.webp"
+                  class="product-card__image"
+                  alt="Canvas hiking backpack"
+                  draggable="false"
+                  loading="lazy"
+                />
+                <button
+                  class="product-card__wishlist-button"
+                  type="button"
+                  data-demo="the wishlist"
+                >
+                  add to wishlist
+                </button>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__brand">Fantasy Outdoor</h3>
+                <p class="product-card__description">Canvas hiking backpack</p>
+                <p class="product-card__price-row">
+                  <span class="product-card__price">$59</span>
+                  <span class="product-card__actual-price">$85</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__media">
+                <span class="product-card__badge">40% off</span>
+                <img
+                  src="./assets/images/index/best-seller-5.webp"
+                  class="product-card__image"
+                  alt="Cream knit sweater"
+                  draggable="false"
+                  loading="lazy"
+                />
+                <button
+                  class="product-card__wishlist-button"
+                  type="button"
+                  data-demo="the wishlist"
+                >
+                  add to wishlist
+                </button>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__brand">Fantasy Studio</h3>
+                <p class="product-card__description">Cream knit sweater</p>
+                <p class="product-card__price-row">
+                  <span class="product-card__price">$39</span>
+                  <span class="product-card__actual-price">$65</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__media">
+                <span class="product-card__badge">25% off</span>
+                <img
+                  src="./assets/images/index/best-seller-6.webp"
+                  class="product-card__image"
+                  alt="DSLR camera with 18–55 mm lens"
+                  draggable="false"
+                  loading="lazy"
+                />
+                <button
+                  class="product-card__wishlist-button"
+                  type="button"
+                  data-demo="the wishlist"
+                >
+                  add to wishlist
+                </button>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__brand">Fantasy Tech</h3>
+                <p class="product-card__description">
+                  DSLR camera with 18–55 mm lens
+                </p>
+                <p class="product-card__price-row">
+                  <span class="product-card__price">$449</span>
+                  <span class="product-card__actual-price">$599</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__media">
+                <span class="product-card__badge">40% off</span>
+                <img
+                  src="./assets/images/index/best-seller-7.webp"
+                  class="product-card__image"
+                  alt="Camel wool coat"
+                  draggable="false"
+                  loading="lazy"
+                />
+                <button
+                  class="product-card__wishlist-button"
+                  type="button"
+                  data-demo="the wishlist"
+                >
+                  add to wishlist
+                </button>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__brand">Fantasy Studio</h3>
+                <p class="product-card__description">Camel wool coat</p>
+                <p class="product-card__price-row">
+                  <span class="product-card__price">$119</span>
+                  <span class="product-card__actual-price">$199</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__media">
+                <span class="product-card__badge">20% off</span>
+                <img
+                  src="./assets/images/index/new-arrival-1.webp"
+                  class="product-card__image"
+                  alt="Red running sneakers"
+                  draggable="false"
+                  loading="lazy"
+                />
+                <button
+                  class="product-card__wishlist-button"
+                  type="button"
+                  data-demo="the wishlist"
+                >
+                  add to wishlist
+                </button>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__brand">Fantasy Street</h3>
+                <p class="product-card__description">Red running sneakers</p>
+                <p class="product-card__price-row">
+                  <span class="product-card__price">$64</span>
+                  <span class="product-card__actual-price">$80</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__media">
+                <span class="product-card__badge">21% off</span>
+                <img
+                  src="./assets/images/index/new-arrival-2.webp"
+                  class="product-card__image"
+                  alt="Vintage 35 mm film camera"
+                  draggable="false"
+                  loading="lazy"
+                />
+                <button
+                  class="product-card__wishlist-button"
+                  type="button"
+                  data-demo="the wishlist"
+                >
+                  add to wishlist
+                </button>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__brand">Fantasy Tech</h3>
+                <p class="product-card__description">
+                  Vintage 35 mm film camera
+                </p>
+                <p class="product-card__price-row">
+                  <span class="product-card__price">$189</span>
+                  <span class="product-card__actual-price">$239</span>
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer u-radius-bottom"></footer>
+  </body>
+</html>

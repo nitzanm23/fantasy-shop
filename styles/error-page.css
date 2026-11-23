@@ -1,0 +1,118 @@
+/**
+ * Fantasy Shop: "page not found" page.
+ *
+ * Loaded only by error-page.html: the illustrated 404 hero, the search box that sends visitors
+ * to search.html, and the links back into the site.
+ */
+
+/* ========== ERROR PAGE ========== */
+.error-page {
+  min-height: 100dvh;
+  background: #22232e;
+}
+
+/* ========== ERROR HERO ========== */
+.error-hero {
+  position: relative;
+  min-height: var(--page-hero-height);
+  background-image: url("../assets/images/error-page/error-page.webp");
+  isolation: isolate;
+}
+
+.error-hero__panel {
+  width: min(100% - 2rem, 820px);
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  color: #e0ffff;
+  text-align: center;
+}
+
+.error-hero__title {
+  color: #00c2cb;
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  text-shadow: 0 6px 22px rgba(0, 0, 0, 0.85);
+  filter: var(--drop-shadow-black);
+}
+
+.error-hero__title span {
+  color: var(--color-invert);
+}
+
+.error-hero__text {
+  width: min(100%, 720px);
+  margin: var(--space-5) auto;
+  color: var(--color-invert);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+  text-shadow: 0 6px 22px rgba(0, 0, 0, 0.85);
+  filter: var(--drop-shadow-black);
+}
+
+/* ========== ERROR SEARCH ========== */
+.error-search {
+  display: flex;
+  width: min(100%, 620px);
+  margin: var(--space-6) auto 0;
+  box-shadow: var(--shadow-card);
+  filter: var(--drop-shadow-black);
+}
+
+.error-search__input {
+  width: 85%;
+  height: 56px;
+  padding: var(--space-3) var(--space-5);
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  background: rgba(255, 255, 255, 0.96);
+  color: #22232e;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.error-search__input:focus-visible {
+  border-color: #004958;
+  outline: none;
+}
+
+.error-search__button {
+  display: grid;
+  place-items: center;
+  width: 15%;
+  min-width: 72px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: #004958;
+  color: #e0ffff;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+/* ========== RECOVERY LINKS ========== */
+.error-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+  filter: var(--drop-shadow-black);
+}
+
+.error-links__link {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--color-invert);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.85);
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.error-links__link:hover,
+.error-links__link:focus-visible {
+  background: #004958;
+  transform: translateY(-2px);
+}

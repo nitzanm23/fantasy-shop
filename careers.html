@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <!--
+    Fantasy Shop: careers page (portfolio demo).
+    Sections: Header, Careers Hero, Intro, Why Work With Us, Benefits, Open Roles, Footer.
+    Header and footer markup is rendered by scripts/nav.js and scripts/footer.js.
+  -->
+
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore careers at Fantasy Shop and discover open roles, team culture, benefits, and opportunities to grow with us."
+    />
+    <meta name="theme-color" content="#ada996" />
+
+    <title>Careers | Fantasy Shop</title>
+
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+    <link
+      rel="canonical"
+      href="https://nitzanm23.github.io/fantasy-shop/careers.html"
+    />
+
+    <!-- Social sharing preview (LinkedIn, Slack, WhatsApp, X); these require absolute URLs -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fantasy Shop" />
+    <meta property="og:title" content="Careers | Fantasy Shop" />
+    <meta
+      property="og:description"
+      content="Explore careers at Fantasy Shop and discover open roles, team culture, benefits, and opportunities to grow with us."
+    />
+    <meta
+      property="og:url"
+      content="https://nitzanm23.github.io/fantasy-shop/careers.html"
+    />
+    <meta
+      property="og:image"
+      content="https://nitzanm23.github.io/fantasy-shop/assets/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Fantasy Shop home page with product carousels"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Self-hosted font (vendor/) -->
+    <link
+      rel="preload"
+      href="./vendor/fonts/fredoka-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./vendor/fonts/fonts.css" />
+
+    <!-- Project styles -->
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/company-pages.css" />
+
+    <!-- Project scripts -->
+    <script src="./scripts/nav.js" defer></script>
+    <script src="./scripts/footer.js" defer></script>
+    <script src="./scripts/demo-notice.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+      <nav class="navbar u-radius-bottom" aria-label="Primary navigation"></nav>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+
+    <main class="page-main" id="main-content">
+      <!-- ========== CAREERS HERO ========== -->
+      <section class="page-hero parallax page-hero--careers">
+        <div class="page-hero__content">
+          <div class="page-hero__panel fade-in">
+            <h1 class="page-hero__title" id="careers-title">
+              Your <span>Career</span>
+            </h1>
+            <p class="page-hero__subtitle">
+              Be part of our family and help shape creative shopping.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <!-- ========== INTRO SECTION ========== -->
+        <section class="content-section fade-in" aria-labelledby="work-title">
+          <h2 class="content-section__title" id="work-title">
+            Come Work With Us
+          </h2>
+          <p class="content-section__description">
+            Join <span>Fantasy Shop</span> and bring your passion to life. We
+            value creativity, flexibility, collaboration, and people who want to
+            build memorable shopping experiences.
+          </p>
+        </section>
+
+        <div class="u-divider"></div>
+
+        <!-- ========== WHY WORK WITH US SECTION ========== -->
+        <section class="content-section fade-in" aria-labelledby="why-title">
+          <h2 class="content-section__title" id="why-title">
+            Why Work With Us?
+          </h2>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <svg
+                class="icon feature-card__icon"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <use href="./assets/icons/icons.svg#shuffle" />
+              </svg>
+              <h3 class="feature-card__title">Remote Flexibility</h3>
+              <p class="feature-card__text">
+                Work with flexibility and maintain a healthier work-life
+                balance.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <svg
+                class="icon feature-card__icon"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <use href="./assets/icons/icons.svg#lightbulb" />
+              </svg>
+              <h3 class="feature-card__title">Creative Culture</h3>
+              <p class="feature-card__text">
+                Bring ideas, experiment, and build products people enjoy using.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <svg
+                class="icon feature-card__icon"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <use href="./assets/icons/icons.svg#chart-line" />
+              </svg>
+              <h3 class="feature-card__title">Growth</h3>
+              <p class="feature-card__text">
+                Learn, improve, and grow with a team that values progress.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <div class="u-divider"></div>
+
+        <!-- ========== BENEFITS SECTION ========== -->
+        <section
+          class="content-section fade-in"
+          aria-labelledby="benefits-title"
+        >
+          <h2 class="content-section__title" id="benefits-title">Benefits</h2>
+          <p class="content-section__description">
+            We believe great work starts with a supportive, creative, and
+            enjoyable environment.
+          </p>
+
+          <div class="benefits-grid">
+            <article class="benefit-card">
+              <img
+                src="./assets/images/company-pages/benefits1.webp"
+                alt="Food and drink"
+                class="benefit-card__image"
+              />
+              <h3 class="benefit-card__title">Food &amp; Drinks</h3>
+            </article>
+
+            <article class="benefit-card">
+              <img
+                src="./assets/images/company-pages/benefits2.webp"
+                alt="Dog friendly office"
+                class="benefit-card__image"
+              />
+              <h3 class="benefit-card__title">Dog Friendly</h3>
+            </article>
+
+            <article class="benefit-card">
+              <img
+                src="./assets/images/company-pages/benefits3.webp"
+                alt="Games and consoles"
+                class="benefit-card__image"
+              />
+              <h3 class="benefit-card__title">Games &amp; Fun</h3>
+            </article>
+
+            <article class="benefit-card">
+              <img
+                src="./assets/images/company-pages/benefits4.webp"
+                alt="Modern equipment"
+                class="benefit-card__image"
+              />
+              <h3 class="benefit-card__title">Modern Equipment</h3>
+            </article>
+
+            <article class="benefit-card">
+              <img
+                src="./assets/images/company-pages/benefits5.webp"
+                alt="Decorated office"
+                class="benefit-card__image"
+              />
+              <h3 class="benefit-card__title">Creative Office</h3>
+            </article>
+
+            <article class="benefit-card">
+              <img
+                src="./assets/images/company-pages/benefits6.webp"
+                alt="Vacations"
+                class="benefit-card__image"
+              />
+              <h3 class="benefit-card__title">Vacations</h3>
+            </article>
+          </div>
+        </section>
+
+        <div class="u-divider"></div>
+
+        <!-- ========== OPEN ROLES SECTION ========== -->
+        <section class="content-section fade-in" aria-labelledby="roles-title">
+          <h2 class="content-section__title" id="roles-title">
+            Open Positions
+          </h2>
+
+          <div class="role-list">
+            <article class="role-card">
+              <div class="role-card__inner">
+                <div class="role-card__front">
+                  <svg
+                    class="icon role-card__icon"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use href="./assets/icons/icons.svg#code" />
+                  </svg>
+                  <h3 class="role-card__title">Frontend Developer</h3>
+                  <p class="role-card__meta">Remote · Full Time</p>
+                  <p class="role-card__description">
+                    Build polished, accessible, responsive shopping experiences.
+                  </p>
+                </div>
+
+                <div class="role-card__back">
+                  <h3 class="role-card__title">Think you fit?</h3>
+                  <ul class="role-card__requirements">
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Responsive UI</li>
+                    <li>Accessibility mindset</li>
+                  </ul>
+                  <a class="button role-card__action" href="./contact-us.html"
+                    >Apply Now</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="role-card">
+              <div class="role-card__inner">
+                <div class="role-card__front">
+                  <svg
+                    class="icon role-card__icon"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use href="./assets/icons/icons.svg#paintbrush" />
+                  </svg>
+                  <h3 class="role-card__title">Product Designer</h3>
+                  <p class="role-card__meta">Hybrid · Full Time</p>
+                  <p class="role-card__description">
+                    Design creative journeys and improve product discovery.
+                  </p>
+                </div>
+
+                <div class="role-card__back">
+                  <h3 class="role-card__title">Think you fit?</h3>
+                  <ul class="role-card__requirements">
+                    <li>Figma / Adobe XD</li>
+                    <li>UI systems</li>
+                    <li>Creative product thinking</li>
+                  </ul>
+                  <a class="button role-card__action" href="./contact-us.html"
+                    >Apply Now</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer u-radius-bottom"></footer>
+  </body>
+</html>

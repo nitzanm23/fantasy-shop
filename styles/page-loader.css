@@ -1,0 +1,113 @@
+/**
+ * Fantasy Shop: home page opening screen.
+ *
+ * scripts/page-loader.js adds `.is-loading` to <html> before first paint, then swaps it for
+ * `.is-loaded`. Every rule here depends on one of those classes, so with JavaScript disabled
+ * the loader never appears and the page is visible immediately.
+ */
+
+/* ========== LOADER ========== */
+.page-loader {
+  display: none;
+}
+
+html.is-loading .page-loader,
+html.is-loaded .page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-loader);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  background: var(--gradient-surface-bottom);
+  transition:
+    opacity var(--transition-base),
+    visibility var(--transition-base);
+}
+
+html.is-loading .page-loader {
+  animation: loader-failsafe 2.5s step-end forwards;
+}
+
+html.is-loaded .page-loader {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.page-loader__logo {
+  width: clamp(150px, 50%, 300px);
+  height: auto;
+  animation: loader-flip var(--transition-slow);
+}
+
+/* ========== HIDDEN CONTENT ========== */
+html.is-loading .skip-link,
+html.is-loading .site-header,
+html.is-loading .app-root,
+html.is-loading .footer {
+  visibility: hidden;
+  animation: content-failsafe 2.5s step-end forwards;
+}
+
+html.is-loading body {
+  overflow: hidden;
+  animation: scroll-failsafe 2.5s step-end forwards;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes loader-flip {
+  from {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+/*
+ * Failsafes: if a script error stops page-loader.js from removing `.is-loading`,
+ * these keyframes still hide the loader and reveal the page after 2.5 seconds.
+ */
+@keyframes loader-failsafe {
+  to {
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@keyframes content-failsafe {
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes scroll-failsafe {
+  to {
+    overflow: auto;
+  }
+}
+
+/* ========== REDUCED MOTION ========== */
+@media (prefers-reduced-motion: reduce) {
+  .page-loader__logo {
+    animation: none;
+  }
+
+  /*
+   * reset.css shortens every animation to 0.01ms for reduced motion, which would fire
+   * the failsafes instantly. Restore their timing; they are timers, not motion.
+   */
+  html.is-loading .page-loader,
+  html.is-loading .skip-link,
+  html.is-loading .site-header,
+  html.is-loading .app-root,
+  html.is-loading .footer,
+  html.is-loading body {
+    animation-duration: 2.5s !important;
+  }
+}

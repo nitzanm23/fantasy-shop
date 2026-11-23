@@ -1,0 +1,99 @@
+/**
+ * Fantasy Shop: thank-you page.
+ *
+ * Loaded only by thank-you.html, the page the contact form leads to: the hero video and the
+ * confirmation card.
+ */
+
+/* ========== THANK YOU HERO ========== */
+.thank-you-hero {
+  position: relative;
+}
+
+.thank-you-hero__video {
+  width: 100%;
+  min-height: var(--page-hero-height);
+  object-fit: cover;
+  box-shadow: var(--shadow-card);
+}
+
+/* ========== CONFIRMATION ========== */
+.thank-you {
+  position: relative;
+  z-index: 1;
+  padding-bottom: var(--space-12);
+}
+
+.thank-you__card {
+  margin-top: -150px;
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  background: var(--gradient-surface-top);
+  box-shadow: var(--shadow-card);
+}
+
+.thank-you__grid {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.thank-you__image {
+  width: min(100%, 520px);
+  margin-inline: auto;
+  animation: float-y 2.5s ease-in-out infinite alternate;
+}
+
+.thank-you__content {
+  text-align: center;
+}
+
+.thank-you__title {
+  margin-bottom: var(--space-6);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: var(--font-weight-bold);
+}
+
+.thank-you__text {
+  margin-bottom: var(--space-4);
+  color: var(--color-secondary);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.45;
+}
+
+.thank-you__text span {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.thank-you__text--featured span {
+  font-size: 1.5rem;
+}
+
+.thank-you__action {
+  margin-top: var(--space-4);
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes float-y {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-12px);
+  }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media only screen and (max-width: 768px) {
+  .thank-you__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .thank-you__card {
+    margin-top: -60px;
+    padding: var(--space-5);
+  }
+}

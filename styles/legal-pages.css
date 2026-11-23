@@ -1,0 +1,95 @@
+/**
+ * Fantasy Shop: privacy, terms, cookies, and security pages.
+ *
+ * Loaded by the four legal pages. They share one layout; only the hero background image is set
+ * per page.
+ */
+
+/* ========== LEGAL HERO BACKGROUNDS ========== */
+.page-hero--privacy {
+  background-image: url("../assets/images/legal-pages/privacy-policy-background.webp");
+}
+
+.page-hero--terms {
+  background-image: url("../assets/images/legal-pages/terms-of-use-background.webp");
+}
+
+.page-hero--cookies {
+  background-image: url("../assets/images/legal-pages/cookies-background.webp");
+}
+
+.page-hero--security {
+  background-image: url("../assets/images/legal-pages/security-background.webp");
+}
+
+/* ========== LEGAL CONTENT ========== */
+/* Marks the policy text as sample content; the store is fictional. */
+.legal-section__notice {
+  max-width: 720px;
+  margin: 0 auto var(--space-6);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.06);
+  font-style: italic;
+  text-align: center;
+}
+
+.legal-content {
+  padding-block: var(--space-12);
+}
+
+.legal-section {
+  padding-block: var(--space-8);
+}
+
+.legal-section__title {
+  position: relative;
+  margin-bottom: var(--space-6);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.legal-section__title::after {
+  content: "";
+  display: block;
+  width: min(180px, 50%);
+  height: 4px;
+  margin: var(--space-4) auto 0;
+  background: var(--color-secondary);
+}
+
+.legal-section__text {
+  width: min(100%, 850px);
+  margin-inline: auto;
+  color: var(--color-secondary);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.55;
+}
+
+.legal-section__text span,
+.legal-list span {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.legal-list {
+  width: min(100%, 850px);
+  margin: var(--space-5) auto 0;
+  color: var(--color-secondary);
+  line-height: 1.55;
+  list-style: disc;
+  padding-left: var(--space-6);
+}
+
+.legal-list__heading {
+  margin-top: var(--space-4);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  list-style: none;
+}
+
+.legal-list li + li {
+  margin-top: var(--space-2);
+}

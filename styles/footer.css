@@ -1,0 +1,198 @@
+/**
+ * Fantasy Shop: shared footer.
+ *
+ * Styles the markup that scripts/footer.js renders on every page: social and app-store
+ * buttons, the link and payment columns, and the copyright row.
+ */
+
+/* ========== FOOTER ========== */
+.footer {
+  background: var(--gradient-surface-right);
+}
+
+.footer__top {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-6);
+  background-color: var(--color-footer-surface);
+}
+
+/* ========== SOCIAL LINKS ========== */
+.footer__social-list,
+.footer__download-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.footer__social-link {
+  display: inline-grid;
+  place-items: center;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  padding: 15px;
+  border-radius: var(--radius-full);
+  text-align: center;
+  transition:
+    background-color var(--transition-fast),
+    filter var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.footer__social-link:hover,
+.footer__social-link:focus-visible {
+  background-color: var(--color-hover);
+  box-shadow: var(--shadow-light);
+  filter: var(--drop-shadow-white);
+}
+
+.footer__download-link {
+  display: inline-block;
+  width: clamp(7.4125rem, 10vw, 9.8125rem);
+  margin: 0.3rem;
+  transition:
+    filter var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.footer__download-link:hover,
+.footer__download-link:focus-visible {
+  box-shadow: var(--shadow-light);
+  filter: var(--drop-shadow-black);
+}
+
+/* ========== FOOTER MENU ========== */
+.footer__menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  padding: var(--space-12);
+}
+
+.footer__brand-image {
+  width: 50%;
+  margin: auto;
+}
+
+.footer__column-title,
+.footer__brand-image {
+  padding-bottom: var(--space-6);
+}
+
+.footer__column-text,
+.footer__link {
+  padding-right: var(--space-6);
+}
+
+/* Margin, not padding: on a 1em SVG with border-box sizing, padding shrinks the icon. */
+.footer__payment-icon {
+  margin-right: var(--space-6);
+}
+
+.footer__column:nth-last-child(2) .footer__link {
+  display: grid;
+  padding-bottom: 10px;
+  opacity: 0.5;
+}
+
+.footer__column:nth-last-child(2) .footer__link:hover,
+.footer__column:nth-last-child(2) .footer__link:focus-visible {
+  filter: var(--drop-shadow-black);
+  opacity: 1;
+}
+
+.footer__column:nth-last-child(2),
+.footer__column:last-child {
+  font-size: 1.25rem;
+}
+
+.footer__payment-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* ========== COPYRIGHT ========== */
+.footer__copyright {
+  padding: var(--space-6);
+  background-color: var(--color-footer-surface);
+  text-align: center;
+}
+
+.footer__copyright a:hover {
+  color: var(--color-path-fill);
+}
+
+.footer__copyright .u-divider {
+  width: 50%;
+  margin: 0.6rem auto;
+}
+
+.footer__legal-link {
+  opacity: 0.5;
+}
+
+.footer__legal-link:hover,
+.footer__legal-link:focus-visible {
+  filter: var(--drop-shadow-black);
+  opacity: 1;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media only screen and (min-width: 992px) {
+  .footer__top {
+    justify-content: space-between;
+  }
+
+  .footer__column:nth-last-child(2),
+  .footer__column:last-child {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer__top {
+    display: grid;
+    justify-content: center;
+    gap: var(--space-4);
+  }
+
+  .footer__download-list {
+    margin: auto;
+  }
+
+  .footer__menu {
+    display: block;
+    text-align: center;
+  }
+
+  /* Inline links in a wrapped row: keep each touch target at least 24px tall (WCAG 2.5.8). */
+  .footer__column:nth-last-child(2) .footer__link {
+    display: inline-block;
+    min-height: 24px;
+    padding-block: 2px;
+  }
+
+  .footer__column-text,
+  .footer__link,
+  .footer__payment-icon {
+    margin: 10px;
+  }
+
+  .footer__column-title,
+  .footer__brand-image {
+    padding-block: var(--space-4);
+  }
+
+  .footer__column:nth-last-child(2),
+  .footer__column:last-child {
+    font-size: 1.25rem;
+  }
+
+  .footer__social-list,
+  .footer__download-list,
+  .footer__payment-list {
+    flex-wrap: wrap;
+  }
+}

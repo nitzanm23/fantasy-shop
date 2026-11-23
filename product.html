@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+  <!--
+    Fantasy Shop: product page (portfolio demo).
+    Sections: Header, Product Hero, Product Details, Description, Related Products, Footer.
+    Header and footer markup is rendered by scripts/nav.js and scripts/footer.js.
+  -->
+
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Fantasy Shop product page - explore product details, gallery images, available sizes, pricing, discounts, and related items."
+    />
+    <meta name="theme-color" content="#ada996" />
+
+    <title>Product Details | Fantasy Shop</title>
+
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+    <link
+      rel="canonical"
+      href="https://nitzanm23.github.io/fantasy-shop/product.html"
+    />
+
+    <!-- Social sharing preview (LinkedIn, Slack, WhatsApp, X); these require absolute URLs -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fantasy Shop" />
+    <meta property="og:title" content="Product Details | Fantasy Shop" />
+    <meta
+      property="og:description"
+      content="Fantasy Shop product page - explore product details, gallery images, available sizes, pricing, discounts, and related items."
+    />
+    <meta
+      property="og:url"
+      content="https://nitzanm23.github.io/fantasy-shop/product.html"
+    />
+    <meta
+      property="og:image"
+      content="https://nitzanm23.github.io/fantasy-shop/assets/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Fantasy Shop home page with product carousels"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Self-hosted font (vendor/) -->
+    <link
+      rel="preload"
+      href="./vendor/fonts/fredoka-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./vendor/fonts/fonts.css" />
+
+    <!-- Project styles -->
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/product-carousel.css" />
+    <link rel="stylesheet" href="./styles/product.css" />
+
+    <!-- Project scripts -->
+    <script src="./scripts/nav.js" defer></script>
+    <script src="./scripts/footer.js" defer></script>
+    <script src="./scripts/demo-notice.js" defer></script>
+    <script src="./scripts/background-video.js" defer></script>
+    <script src="./scripts/product-carousel.js" defer></script>
+    <script src="./scripts/product.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+      <nav class="navbar u-radius-bottom" aria-label="Primary navigation"></nav>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+
+    <main class="page-main" id="main-content">
+      <!-- ========== PRODUCT HERO ========== -->
+      <section class="page-hero">
+        <video
+          class="page-hero__media"
+          poster="./assets/videos/product-poster.webp"
+          loop
+          muted
+          playsinline
+          preload="metadata"
+          data-background-video
+          aria-hidden="true"
+        >
+          <source src="./assets/videos/product.mp4" type="video/mp4" />
+        </video>
+
+        <div class="page-hero__content">
+          <div class="page-hero__panel fade-in">
+            <h1 class="page-hero__title" id="product-hero-title">
+              Product <span>Details</span>
+            </h1>
+            <p class="page-hero__subtitle">
+              Take a look at the details of the product you are looking for.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <!-- ========== PRODUCT DETAILS ========== -->
+        <section class="product-detail fade-in" aria-labelledby="product-title">
+          <div class="product-detail__gallery">
+            <div
+              class="product-gallery"
+              role="group"
+              aria-label="Product images"
+            >
+              <div class="product-gallery__thumb-list">
+                <button
+                  class="product-gallery__thumb is-active"
+                  type="button"
+                  aria-pressed="true"
+                  aria-label="Show product image 1"
+                >
+                  <img
+                    src="./assets/images/product/training-pants-1.webp"
+                    alt="Model wearing the training pants with a matching top"
+                    draggable="false"
+                    loading="eager"
+                  />
+                </button>
+                <button
+                  class="product-gallery__thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="Show product image 2"
+                >
+                  <img
+                    src="./assets/images/product/training-pants-2.webp"
+                    alt="Model in the training pants holding a football"
+                    draggable="false"
+                    loading="lazy"
+                  />
+                </button>
+                <button
+                  class="product-gallery__thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="Show product image 3"
+                >
+                  <img
+                    src="./assets/images/product/training-pants-3.webp"
+                    alt="Side view of the training pants"
+                    draggable="false"
+                    loading="lazy"
+                  />
+                </button>
+                <button
+                  class="product-gallery__thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="Show product image 4"
+                >
+                  <img
+                    src="./assets/images/product/training-pants-4.webp"
+                    alt="The training pants laid flat"
+                    draggable="false"
+                    loading="lazy"
+                  />
+                </button>
+                <button
+                  class="product-gallery__thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="Show product image 5"
+                >
+                  <img
+                    src="./assets/images/product/training-pants-5.webp"
+                    alt="Back view of the training pants"
+                    draggable="false"
+                    loading="lazy"
+                  />
+                </button>
+                <button
+                  class="product-gallery__thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="Show product image 6"
+                >
+                  <img
+                    src="./assets/images/product/training-pants-6.webp"
+                    alt="Close-up of the crest on the training pants"
+                    draggable="false"
+                    loading="lazy"
+                  />
+                </button>
+                <button
+                  class="product-gallery__thumb"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="Show product image 7"
+                >
+                  <img
+                    src="./assets/images/product/training-pants-7.webp"
+                    alt="Close-up of the training pants side panel"
+                    draggable="false"
+                    loading="lazy"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-detail__info">
+            <div class="product-info">
+              <h2 class="product-info__brand" id="product-title">
+                Fantasy Sport
+              </h2>
+              <p class="product-info__description">
+                Slim-fit football training pants with zip ankles.
+              </p>
+
+              <p class="product-info__price-row">
+                <span class="product-info__price">$99</span>
+                <span class="product-info__actual-price">$200</span>
+                <span class="product-info__discount">(50% off)</span>
+              </p>
+
+              <p class="product-info__sub-heading" aria-hidden="true">
+                Select size
+              </p>
+
+              <fieldset class="size-selector">
+                <legend class="sr-only">Select size</legend>
+                <input
+                  class="size-selector__input"
+                  type="radio"
+                  name="size"
+                  value="s"
+                  checked
+                  id="s-size"
+                />
+                <label class="size-selector__label" for="s-size">s</label>
+
+                <input
+                  class="size-selector__input"
+                  type="radio"
+                  name="size"
+                  value="m"
+                  id="m-size"
+                />
+                <label class="size-selector__label" for="m-size">m</label>
+
+                <input
+                  class="size-selector__input"
+                  type="radio"
+                  name="size"
+                  value="l"
+                  id="l-size"
+                />
+                <label class="size-selector__label" for="l-size">l</label>
+
+                <input
+                  class="size-selector__input"
+                  type="radio"
+                  name="size"
+                  value="xl"
+                  id="xl-size"
+                />
+                <label class="size-selector__label" for="xl-size">xl</label>
+
+                <input
+                  class="size-selector__input"
+                  type="radio"
+                  name="size"
+                  value="xxl"
+                  id="xxl-size"
+                />
+                <label class="size-selector__label" for="xxl-size">xxl</label>
+              </fieldset>
+
+              <div class="product-actions">
+                <button
+                  class="product-actions__button"
+                  type="button"
+                  data-demo="the cart"
+                >
+                  Add to cart
+                </button>
+                <button
+                  class="product-actions__button"
+                  type="button"
+                  data-demo="the wishlist"
+                >
+                  Add to wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== DESCRIPTION ========== -->
+        <section
+          class="product-description fade-in"
+          aria-labelledby="product-description-title"
+        >
+          <h2 class="product-description__title" id="product-description-title">
+            Description
+          </h2>
+          <p class="product-description__text">
+            Lightweight training pants cut for movement on and off the pitch.
+            The stretch knit fabric wicks sweat, contrast side panels add a
+            sporty look, and zip ankles make them easy to pull on over boots.
+            Machine washable.
+          </p>
+        </section>
+
+        <!-- ========== RELATED PRODUCTS ========== -->
+        <section
+          class="related-products fade-in"
+          aria-labelledby="related-products-title"
+        >
+          <h2 class="related-products__title" id="related-products-title">
+            Best sellers
+          </h2>
+
+          <button
+            class="related-products__nav-button related-products__nav-button--previous"
+            type="button"
+            aria-label="Previous related products"
+          >
+            <img
+              src="./assets/images/index/carousel-arrow.webp"
+              alt=""
+              draggable="false"
+              loading="lazy"
+            />
+          </button>
+
+          <button
+            class="related-products__nav-button related-products__nav-button--next"
+            type="button"
+            aria-label="Next related products"
+          >
+            <img
+              src="./assets/images/index/carousel-arrow.webp"
+              alt=""
+              draggable="false"
+              loading="lazy"
+            />
+          </button>
+
+          <div class="related-products__viewport">
+            <div class="related-products__list">
+              <article class="product-card">
+                <div class="product-card__media">
+                  <span class="product-card__badge">50% off</span>
+                  <img
+                    src="./assets/images/index/best-seller-1.webp"
+                    class="product-card__image"
+                    alt="Yellow two-piece tracksuit"
+                    draggable="false"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__wishlist-button"
+                    type="button"
+                    data-demo="the wishlist"
+                  >
+                    add to wishlist
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__brand">Fantasy Street</h3>
+                  <p class="product-card__description">
+                    Yellow two-piece tracksuit
+                  </p>
+                  <p class="product-card__price-row">
+                    <span class="product-card__price">$48</span>
+                    <span class="product-card__actual-price">$96</span>
+                  </p>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__media">
+                  <span class="product-card__badge">40% off</span>
+                  <img
+                    src="./assets/images/index/best-seller-2.webp"
+                    class="product-card__image"
+                    alt="Smartwatch with sport band"
+                    draggable="false"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__wishlist-button"
+                    type="button"
+                    data-demo="the wishlist"
+                  >
+                    add to wishlist
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__brand">Fantasy Tech</h3>
+                  <p class="product-card__description">
+                    Smartwatch with sport band
+                  </p>
+                  <p class="product-card__price-row">
+                    <span class="product-card__price">$149</span>
+                    <span class="product-card__actual-price">$249</span>
+                  </p>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__media">
+                  <span class="product-card__badge">36% off</span>
+                  <img
+                    src="./assets/images/index/best-seller-3.webp"
+                    class="product-card__image"
+                    alt="Burgundy button-up shirt"
+                    draggable="false"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__wishlist-button"
+                    type="button"
+                    data-demo="the wishlist"
+                  >
+                    add to wishlist
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__brand">Fantasy Basics</h3>
+                  <p class="product-card__description">
+                    Burgundy button-up shirt
+                  </p>
+                  <p class="product-card__price-row">
+                    <span class="product-card__price">$29</span>
+                    <span class="product-card__actual-price">$45</span>
+                  </p>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__media">
+                  <span class="product-card__badge">31% off</span>
+                  <img
+                    src="./assets/images/index/best-seller-4.webp"
+                    class="product-card__image"
+                    alt="Canvas hiking backpack"
+                    draggable="false"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__wishlist-button"
+                    type="button"
+                    data-demo="the wishlist"
+                  >
+                    add to wishlist
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__brand">Fantasy Outdoor</h3>
+                  <p class="product-card__description">
+                    Canvas hiking backpack
+                  </p>
+                  <p class="product-card__price-row">
+                    <span class="product-card__price">$59</span>
+                    <span class="product-card__actual-price">$85</span>
+                  </p>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__media">
+                  <span class="product-card__badge">40% off</span>
+                  <img
+                    src="./assets/images/index/best-seller-5.webp"
+                    class="product-card__image"
+                    alt="Cream knit sweater"
+                    draggable="false"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__wishlist-button"
+                    type="button"
+                    data-demo="the wishlist"
+                  >
+                    add to wishlist
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__brand">Fantasy Studio</h3>
+                  <p class="product-card__description">Cream knit sweater</p>
+                  <p class="product-card__price-row">
+                    <span class="product-card__price">$39</span>
+                    <span class="product-card__actual-price">$65</span>
+                  </p>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__media">
+                  <span class="product-card__badge">25% off</span>
+                  <img
+                    src="./assets/images/index/best-seller-6.webp"
+                    class="product-card__image"
+                    alt="DSLR camera with 18–55 mm lens"
+                    draggable="false"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__wishlist-button"
+                    type="button"
+                    data-demo="the wishlist"
+                  >
+                    add to wishlist
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__brand">Fantasy Tech</h3>
+                  <p class="product-card__description">
+                    DSLR camera with 18–55 mm lens
+                  </p>
+                  <p class="product-card__price-row">
+                    <span class="product-card__price">$449</span>
+                    <span class="product-card__actual-price">$599</span>
+                  </p>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__media">
+                  <span class="product-card__badge">40% off</span>
+                  <img
+                    src="./assets/images/index/best-seller-7.webp"
+                    class="product-card__image"
+                    alt="Camel wool coat"
+                    draggable="false"
+                    loading="lazy"
+                  />
+                  <button
+                    class="product-card__wishlist-button"
+                    type="button"
+                    data-demo="the wishlist"
+                  >
+                    add to wishlist
+                  </button>
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__brand">Fantasy Studio</h3>
+                  <p class="product-card__description">Camel wool coat</p>
+                  <p class="product-card__price-row">
+                    <span class="product-card__price">$119</span>
+                    <span class="product-card__actual-price">$199</span>
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer u-radius-bottom"></footer>
+  </body>
+</html>
